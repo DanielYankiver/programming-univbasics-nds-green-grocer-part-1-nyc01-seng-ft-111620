@@ -8,16 +8,16 @@ def find_item_by_name_in_collection(name, collection)
   end 
 end
 
-def consolidate_cart(cart) 
-  new_cart = {} 
-  cart.each do |items_array| 
-    items_array.each do |item, attribute_hash| 
-      new_cart[item] ||= attribute_hash 
-      new_cart[item][:count] ? new_cart[item][:count] += 1 :   
-      new_cart[item][:count] = 1 
+def consolidate_cart(cart)
+  new_cart = []
+  counter = 0 
+  while counter < cart.length
+    new_cart_item = find_item_by_name_in_collection
+    
+    end 
+    counter += 1 
   end 
-end 
-new_cart 
+
 end
 
 
